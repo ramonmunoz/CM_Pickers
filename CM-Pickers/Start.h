@@ -8,15 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Start : UIViewController
+@interface Start : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 
 //Objects
 @property (strong, nonatomic) IBOutlet UIDatePicker *pickerDate;
 @property (strong, nonatomic) IBOutlet UIButton *btnDate;
 @property (strong, nonatomic) IBOutlet UILabel *lblResult;
+@property (strong, nonatomic) IBOutlet UIPickerView *pickerStates;
 
 //Action
 - (IBAction)btnDatePressed:(id)sender;
+- (IBAction)btnStatePressed:(id)sender;
 
 @end
 

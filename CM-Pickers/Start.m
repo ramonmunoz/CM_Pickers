@@ -8,6 +8,12 @@
 
 #import "Start.h"
 
+#define     nInitialStates      @"Jalisco", @"Sinaloa",@"Sonora",@"Nayarit",@"Michoacán",nil
+#define     nInitialAmerica     @"Mexico", @"Guatemala",@"Sonora",@"Nayarit",@"Michoacán",nil
+
+NSMutableArray  *maStates;
+NSString        *stSelectedState;
+
 @interface Start ()
 
 @end
@@ -18,12 +24,16 @@
 /**********************************************************************************************/
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self initController];
 }
-
+//------------------------------------------------------------------
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+//------------------------------------------------------------------
+- (void)initController {
+    maStates    = [NSMutableArray arrayWithObjects: nInitialStates];
 }
 /**********************************************************************************************/
 #pragma mark - Action methods
@@ -39,7 +49,37 @@
     self.lblResult.text             = [stInitialTxt stringByAppendingString:stDate];
     self.lblResult.adjustsFontSizeToFitWidth = YES;
 }
-
+//------------------------------------------------------------------
+- (IBAction)btnStatePressed:(id)sender {
+    self.lblResult.text = stSelectedState;
+}
+/**********************************************************************************************/
+#pragma mark - Picker view methods
+/**********************************************************************************************/
+- (NSInteger)numberOfComponentsInPickerView: (UIPickerView *)pickerView {
+    return 1;
+}
+//------------------------------------------------------------------
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return maStates.count;
+}
+//------------------------------------------------------------------
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return maStates[row];
+}
+//------------------------------------------------------------------
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
+    return 40;
+}
+//------------------------------------------------------------------
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    NSLog(@"Picker");
+    if (pickerView == self.pickerStates)
+    {
+        stSelectedState = maStates[row];
+    }
+}
 
 
 
