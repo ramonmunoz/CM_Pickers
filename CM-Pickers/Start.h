@@ -10,6 +10,13 @@
 
 @interface Start : UIViewController
 
+//Objects
+@property (strong, nonatomic) IBOutlet UIDatePicker *pickerDate;
+@property (strong, nonatomic) IBOutlet UIButton *btnDate;
+@property (strong, nonatomic) IBOutlet UILabel *lblResult;
+
+//Action
+- (IBAction)btnDatePressed:(id)sender;
 
 @end
 
