@@ -32,10 +32,12 @@
 {
     NSDate *myDate                  = self.pickerDate.date;
     NSDateFormatter *dateFormat     = [[NSDateFormatter alloc] init];
-    //[dateFormat setDateFormat:@"cccc, MMMM d, hh:mm aa"];
-    [dateFormat setDateFormat:@"dd/MM/YY"];
+    //[dateFormat setDateFormat:@"cccc, d MMMM, hh:mm aa"];
+    [dateFormat setDateFormat:@"dd/MM/YY hh:mm"];
     NSString *stDate                = [dateFormat stringFromDate:myDate];
-    self.lblResult.text             = stDate;
+    NSString *stInitialTxt          = @"La fecha seleccionada es: ";
+    self.lblResult.text             = [stInitialTxt stringByAppendingString:stDate];
+    self.lblResult.adjustsFontSizeToFitWidth = YES;
 }
 
 
