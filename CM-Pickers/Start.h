@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-@interface Start : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
-
+@interface Start : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, ADBannerViewDelegate> {
+    ADBannerView *adView;
+    BOOL bannerIsVisible;
+}
 //Objects
 @property (strong, nonatomic) IBOutlet UIDatePicker *pickerDate;
 @property (strong, nonatomic) IBOutlet UIButton *btnDate;

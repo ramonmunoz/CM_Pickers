@@ -15,6 +15,7 @@
 		D117C8E11B3EE9A000C82D30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D117C8E01B3EE9A000C82D30 /* Images.xcassets */; };
 		D117C8E41B3EE9A000C82D30 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D117C8E21B3EE9A000C82D30 /* LaunchScreen.xib */; };
 		D117C8F01B3EE9A000C82D30 /* CM_PickersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D117C8EF1B3EE9A000C82D30 /* CM_PickersTests.m */; };
+		D117C8FC1B3EFC8200C82D30 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D117C8FB1B3EFC8200C82D30 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		D117C8E91B3EE9A000C82D30 /* CM-PickersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CM-PickersTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D117C8EE1B3EE9A000C82D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D117C8EF1B3EE9A000C82D30 /* CM_PickersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CM_PickersTests.m; sourceTree = "<group>"; };
+		D117C8FB1B3EFC8200C82D30 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D117C8FC1B3EFC8200C82D30 /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +68,7 @@
 		D117C8C41B3EE9A000C82D30 = {
 			isa = PBXGroup;
 			children = (
+				D117C8FB1B3EFC8200C82D30 /* iAd.framework */,
 				D117C8CF1B3EE9A000C82D30 /* CM-Pickers */,
 				D117C8EC1B3EE9A000C82D30 /* CM-PickersTests */,
 				D117C8CE1B3EE9A000C82D30 /* Products */,
